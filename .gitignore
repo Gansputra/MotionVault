@@ -1,0 +1,11 @@
+# Ignore everything in the uploads folder except the .gitkeep file
+/uploads/*
+!/uploads/.gitkeep
+
+# Ignore DB config if using environment variables or just to protect it (user choice)
+# For now, I'll keep it simple as it's a native project
+config/db.php
+
+# PHP related
+*.log
+.DS_Store
