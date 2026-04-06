@@ -14,6 +14,9 @@ session_start();
 // Include database connection
 require_once dirname(__DIR__) . '/config/db.php';
 
+// Include Auth Helper
+require_once dirname(__DIR__) . '/config/auth_helper.php';
+
 // Define base path constants
 define('BASE_PATH', dirname(__DIR__));
 define('URL_ROOT', (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]" . str_replace('index.php', '', $_SERVER['PHP_SELF']));

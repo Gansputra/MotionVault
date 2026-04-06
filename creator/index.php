@@ -3,11 +3,8 @@
  * Creator Dashboard
  */
 
-// Basic Authentication Guard
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ?route=auth/login");
-    exit();
-}
+// Middleware: Hanya bisa diakses oleh kreator yang sudah login
+require_role('creator');
 
 $userName = $_SESSION['user_name'];
 ?>
